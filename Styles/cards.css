@@ -67,3 +67,13 @@
     justify-content: center;
     align-items: center;
 }
+
+.card__Texto { /* Dois problemas! ! 1°: a div empurra o título pra cima. 2°: As palavras são cortadas no eixo X ao invés de quebrar para baixo.*/
+    overflow: hidden;
+    overflow-y: auto;
+    box-sizing: border-box;
+    width: 530px;
+    height: auto;
+    margin: 0;
+    justify-content: center;
+}
