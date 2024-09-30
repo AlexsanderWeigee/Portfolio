@@ -34,10 +34,11 @@ span{
 }
 
 
-.cabecario {
+.cabecalho {
     background-color: var(--cor-primaria);
     text-align: left;
     padding: 1%;
+    padding-left: 150px;
 
     #checkbox {
         display: none;
