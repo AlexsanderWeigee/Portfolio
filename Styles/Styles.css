@@ -251,15 +251,9 @@ p {
 .apresentacao__links__link {
     display: flex;                         /*Permite a flexibilização dos intes de uma Div*/
     justify-content: center;               /*Deixa todos os itens de uma Div alinhados no centro*/
-                           /*Deixa um espaçamento dos itens*/
     width: 200px;                          /*Largura*/
-    padding: 30px 0;                     /*Altura, primeiro valor vertical, segundo horinzontal*/
     margin-left: 2%;
-    font-size: 24px;                       /*Tamanho da fonte*/
-    font-weight: 600;                      /*Adiciona o peso da fonte*/
-    text-decoration: none;                 /*Remove a decoração padão do texto*/
-    color: var(--cor-secundario);          /*Modifica a cor, nesse caso, do texto*/
-    font-family: var(--fonte-segundaria);  /*Modifica a fonte do texto*/
+    padding: 0%;
 }
 
 .img {
@@ -314,15 +308,17 @@ p {
     user-select: none;
   }
   
-  #btn:hover,
-  :focus { /* Depois padronizar as cores dos botões */
+  #btn:hover { /* Depois padronizar as cores dos botões */
     color: var(--cor-secundario);
     background: #008cff; 
     border: 1px solid #008cff;
     text-shadow: 0 0 5px var(--cor-secundario), 0 0 10px var(--cor-secundario), 0 0 20px var(--cor-secundario);
-    box-shadow: 0 0 5px #008cff, 0 0 20px #008cff, 0 0 50px #008cff,
-      0 0 100px #008cff;
+    box-shadow: 0 0 5px #008cff, 0 0 20px #008cff, 0 0 50px #008cff, 0 0 100px #008cff;
   } /* Resolver bug do hover de clicar no botão, ele tem que voltar ao normal depois de alguns segundos de clicado */
+
+  #btn:hover {
+    outline: none;
+  }
   
 .chamadaFinal {
     background-color: var(--cor-octaria);
