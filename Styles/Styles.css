@@ -120,11 +120,6 @@ span{
 }
 
 .apresentacao__principal__1 {
-    /*
-    display: flex;
-    align-items: center;
-    justify-content: space-around;*/
-    
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -134,23 +129,16 @@ span{
 }
 
 .apresentacao__principal__2 {
-    /*
-    padding-right: 0%;
-    margin-right: 0%;
-    margin-left: 5%; */
     margin-top: 5%;
     flex-grow: 1; /* Permite que o conteúdo textual ocupe todo o espaço disponível */
     margin-left: 6%;
 }
 
 .apresentacao__principal {
-    /*box-sizing: border-box;*/
     background-color: var(--cor-primaria);
     color: var(--cor-secundario);
     font-family: var(--fonte-primaria);
-    /*display: flex;*/
     align-items: center;
-    /*justify-content: space-between;*/
     width: 100%;
     height: 1500px;
 }
@@ -201,8 +189,6 @@ span{
     background-color: var(--cor-nonaria);
     padding: 1%;
     color: var(--cor-terciaria);
-    /*height: 80px;
-    width: 100px;*/
     border-radius: 13px;
     margin: 2%;
     width: 50%;
@@ -231,8 +217,6 @@ h2 {
     padding: 1%;
     padding-right: 0%;
     color: var(--cor-secundario);
-    /*height: 80px;
-    width: 100px;*/
     margin: 2%;
     width: 40%;
 }
@@ -257,12 +241,6 @@ p {
 }
 
 .img {
-    /*max-width: 300px;*/ /* Limita a largura máxima */
-    /*width: 100%; /* Faz com que a imagem ocupe 100% da largura disponível */
-    /*height: auto; /* Mantém a proporção da imagem */
-    /*border-radius: 50px; /* Arredonda as bordas */
-    /*margin-top: 1%; /* Espaçamento superior para a imagem */
-    /*margin-right: 2%;*/
     max-width: 600px;
     width: 200%;
     height: auto;
@@ -291,19 +269,19 @@ p {
 
 /* Botão de projetos*/
 /* From Uiverse.io by zjssun */ 
-.btn1 { /* Resolver bug dos botões, todos os links estão com o mesmo problema do hover */
+.btn1 {
     padding: 40px 90px;
     font-family: var(--fonte-primaria);
     text-transform: uppercase;
     border-radius: 13px;
     font-size: 30px;
     font-weight: 500;
-    color: #ffffff80;
+    color: var(--cor-terciaria);
     text-shadow: none;
     background: transparent;
     cursor: pointer;
     box-shadow: transparent;
-    border: 1px solid #ffffff80;
+    border: 1px solid var(--cor-terciaria);
     transition: 0.5s ease;
     user-select: none;
   }
@@ -314,8 +292,8 @@ p {
     border: 1px solid #008cff;
     text-shadow: 0 0 5px var(--cor-secundario), 0 0 10px var(--cor-secundario), 0 0 20px var(--cor-secundario);
     box-shadow: 0 0 5px #008cff, 0 0 20px #008cff, 0 0 50px #008cff, 0 0 100px #008cff;
-  } /* Resolver bug do hover de clicar no botão, ele tem que voltar ao normal depois de alguns segundos de clicado */
-
+  } 
+  
   #btn:hover {
     outline: none;
   }
@@ -406,4 +384,10 @@ footer a {
     flex-direction: column;
     align-items: end;
     margin-left: 10%;
+} 
+
+/* Certificados */
+
+.certificados {
+    background-color: var(--cor-nonaria);
 }

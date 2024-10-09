@@ -22,7 +22,7 @@
     background-color: var(--cor-secundario);
     color: var(--cor-primaria);
 
-    width: 1100px;
+    width: 1300px;
     height: 700px;
     border-radius: 15px;
     border-top-right-radius: 20px;
@@ -59,24 +59,20 @@
     overflow: hidden;
 }
 
-.tecnologias {
-    display: flex;
-}
-
 .cards__separacao {
     display: flex;
     overflow: hidden;
     transition: transform 0.3s ease;
 }
 
-.cards__Titulo {
-    padding-top: 22%;
+.ccards__Titulo {
+    margin-top: 15%;
 }
 
-.cards__Textos { /* Concertar Hover, provavelmente o bug esteja aqui */
+.ccards__Textos { /* Concertar Hover, provavelmente o bug esteja aqui */
     background-color: var(--cor-dectaaria);
     color: var(--cor-secundario);
-    width: 555px;
+    width: 755px;
     height: 700px;
     border-top-right-radius: 15px;
     border-bottom-right-radius: 15px;
@@ -86,33 +82,16 @@
     align-items: center;
     margin: 0;
     padding: 0;
+    
 }
 
-.card__Texto { 
+.ccard__Texto { 
     overflow-y: auto;
     width: 95%;
-    height: 300px;
+    height: 280px;
     margin: 0;
     justify-content: center;
     word-wrap: break-word;
-}
-
-.explorar {
-    padding: 20px 45px;
-    font-family: var(--fonte-primaria);
-    text-transform: uppercase;
-    border-radius: 13px;
-    font-size: 25px;
-    font-weight: 500;
-    color: var(--cor-terciaria);
-    text-shadow: none;
-    background: transparent;
-    cursor: pointer;
-    box-shadow: transparent;
-    border: 1px solid var(--cor-terciaria);
-    transition: 0.5s ease;
-    user-select: none;
-    margin-right: 65%;
 }
 
 /* Scrollbar */
@@ -123,6 +102,24 @@
 }
 
 .card__Texto::-webkit-scrollbar-thumb {
+    background-color: var(--cor-terciaria);
+    border-radius: 10px;
+}
+
+.container__Explorar{
+    padding: 28px;
+    margin-right: 65%;
+    margin-top: 5%;
+}
+
+/* Scrollbar */
+.ccard__Texto::-webkit-scrollbar {
+    background-color: var(--cor-nonaria);
+    width: 12px;
+    border-radius: 10px;
+}
+
+.ccard__Texto::-webkit-scrollbar-thumb {
     background-color: var(--cor-terciaria);
     border-radius: 10px;
 }
