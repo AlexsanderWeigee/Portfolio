@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,46 +9,41 @@
     <link rel="stylesheet" href="./Styles/cards.css">
     <link rel="stylesheet" href="./Styles/Projetos.css">
 </head>
+
 <body class="projetos">
     <header class="cabecalho">
         <input type="checkbox" id="checkbox">
-    <label for="checkbox" class="toggle">
-        <div class="bars" id="bar1"></div>
-        <div class="bars" id="bar2"></div>
-        <div class="bars" id="bar3"></div>
-    </label>
+        <label for="checkbox" class="toggle">
+            <div class="bars" id="bar1"></div>
+            <div class="bars" id="bar2"></div>
+            <div class="bars" id="bar3"></div>
+        </label>
+        <aside class="sidebar">
+            <nav class="sidebar__nav">
+                <h2 class="sidebar__titulo">Navegação</h2>
+                <a href="TodosProjetos.html" class="sidebar__link">Projetos</a>
+                <a href="Certificados.html" class="sidebar__link">Certificados</a>
+                <a href="Curriculo.html" class="sidebar__link">Currículo</a>
+
+                <div class="sidebar__divisor"></div>
+
+                <a href="https://github.com/AlexsanderWeigee" target="_blank" class="sidebar__link">GitHub</a>
+                <a href="https://br.linkedin.com/in/alexsander-weigee" target="_blank"
+                    class="sidebar__link">LinkedIn</a>
+            </nav>
+        </aside>
     </header>
-    <div class="projetos__cards">
-        <div class="cards">
-            <div class="cards__card">
-                <div class="cards__imgTecnologia">
-                    <img class="Img" src="Assents/JogoDoNumeroSecreto.png" alt="Imagem do card">
-                    <div>
-                        <li class="tecnologias">
-                            <img src="Assents/icons8-html-48.png" alt="tecnologia">
-                            <img src="Assents/icons8-css-48.png" alt="tecnologia">
-                            <img src="Assents/icons8-js-48.png" alt="tecnologia">
-                        </li>
-                </div>
-                </div>
+    <div id="projects-container" class="cards-container"> <!--Container para os projetos-->
+        <div id="todos-os-projetos" class="projetos__cards"></div>
+        <div class="btn__Canto">
+            <div class="btn">
+                <a href="index.html" class="btn1" id="btn">Voltar</a>
             </div>
-            <div class="cards__separacao">
-                <div class="cards__Textos">
-                    <h1 class="cards__Titulo">
-                        Titulo do card
-                    </h1>
-                    <p class="card__Texto">
-                        Texto do card afgkdfvkjdbvjksdbjkgbhbsdkjvghdsbdsjlkgc ljdghfncsjfjlkdghvbjdsughsdvjuho ashgfuojhbsvjldsjgvhbdn
-                    </p>
-                    <div class="btn">
-                        <a href="" class="explorar" id="btn">Explorar</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="btn">
-            <a href="index.html" class="btn1" id="btn">Voltar</a>
         </div>
     </div>
+    <br> <!-- Solução improvisada para o problema de ficar uma parte preta em baixo do botão voltar -->
+    <script src="portfolio-api/Projetos.js"></script>
+    <script src="./portfolio-api/server.js"></script>
 </body>
+
 </html>

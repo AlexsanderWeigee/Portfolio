@@ -19,23 +19,50 @@
 
 .cards {
     display: flex;
+    /* flex-shrink: 0; */
+    scroll-snap-align: start;
     background-color: var(--cor-secundario);
     color: var(--cor-primaria);
 
-    width: 1100px;
-    height: 700px;
+    width: 970px;
+    height: 500px;
     border-radius: 15px;
     border-top-right-radius: 20px;
     border-bottom-right-radius: 20px;
     align-items: center;
     justify-content: space-between;
-    transition: transform 0.3s ease;
-    overflow: hidden;
-    /*margin-top: 5%;*/
+    transition: transform 0.3s ease; 
+    margin: 1%;
+}
+
+/* Tentando alinhar os Cards principais dentro dos "Meus Projetos" */
+.CentroCards{
+    display: flex;
+    gap: 4rem;
+    scroll-behavior: smooth;
+    scroll-snap-type: x proximity;
+    z-index: 1;
+    overflow: hidden; /*Não está funcionando o Scroll, se ativado desliga e limita o hover */
+}
+
+.CentroCardsWrapper {
+    width: 100%;
+    overflow-x: hidden;
+    padding: 4rem 0;
+}
+
+.CentroCards::-webkit-scrollbar {
+    display: none;
+}
+
+.CentroCards::-webkit-scrollbar-thumb {
+    background-color: var(--cor-terciaria);
+    border-radius: 10px;
 }
 
 .cards:hover { /* Hover com bug, manter o card com a mesma margin depois do hover */
     transform: scale(1.1); /* Aumenta o card em 10% */
+    z-index: 10;
 }
 
 .Img {
@@ -70,14 +97,14 @@
 }
 
 .cards__Titulo {
-    padding-top: 22%;
+    padding-top: 2%;
 }
 
 .cards__Textos { /* Concertar Hover, provavelmente o bug esteja aqui */
     background-color: var(--cor-dectaaria);
     color: var(--cor-secundario);
-    width: 555px;
-    height: 700px;
+    width: 455px;
+    height: 500px;
     border-top-right-radius: 15px;
     border-bottom-right-radius: 15px;
     display: flex;
@@ -91,14 +118,25 @@
 .card__Texto { 
     overflow-y: auto;
     width: 95%;
-    height: 300px;
+    height: 250px;
     margin: 0;
-    justify-content: center;
-    word-wrap: break-word;
+}
+
+.card__data {
+    display: flex;
+    margin-top: 2%;
+    margin-right: 70%;
+    font-family: var(--fonte-segundaria);
+    font-size: 20px;
+}
+
+.card__btn {
+    display: flex;
+    margin-inline-end: auto;
 }
 
 .explorar {
-    padding: 20px 45px;
+    padding: 15px 25px;
     font-family: var(--fonte-primaria);
     text-transform: uppercase;
     border-radius: 13px;
@@ -112,7 +150,7 @@
     border: 1px solid var(--cor-terciaria);
     transition: 0.5s ease;
     user-select: none;
-    margin-right: 65%;
+    white-space: nowrap; /*Não querbra a linha!*/
 }
 
 /* Scrollbar */

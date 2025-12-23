@@ -1,12 +1,15 @@
 <!--Bugs para resolver:
 1 Bug no cards:
 1° bug: Hover - 36 - 71
+2° bug: JS da sidebar não está funcionando
+3° bug: Cards ser Scroll e saindo do site
 
 Decidir se o cabeçario vai ser fixado ou não
 -->
 
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -14,15 +17,31 @@ Decidir se o cabeçario vai ser fixado ou não
     <link rel="stylesheet" href="./Styles/Styles.css">
     <link rel="stylesheet" href="./Styles/cards.css">
 </head>
+
 <body>
     <header class="cabecalho">
-    <input type="checkbox" id="checkbox">
-    <label for="checkbox" class="toggle">
-        <div class="bars" id="bar1"></div>
-        <div class="bars" id="bar2"></div>
-        <div class="bars" id="bar3"></div>
-    </label>
+        <input type="checkbox" id="checkbox">
+        <label for="checkbox" class="toggle">
+            <div class="bars" id="bar1"></div>
+            <div class="bars" id="bar2"></div>
+            <div class="bars" id="bar3"></div>
+        </label>
+        <aside class="sidebar">
+            <nav class="sidebar__nav">
+                <h2 class="sidebar__titulo">Navegação</h2>
+                <a href="TodosProjetos.html" class="sidebar__link">Projetos</a>
+                <a href="Certificados.html" class="sidebar__link">Certificados</a>
+                <a href="Curriculo.html" class="sidebar__link">Currículo</a>
+
+                <div class="sidebar__divisor"></div>
+
+                <a href="https://github.com/AlexsanderWeigee" target="_blank" class="sidebar__link">GitHub</a>
+                <a href="https://br.linkedin.com/in/alexsander-weigee" target="_blank"
+                    class="sidebar__link">LinkedIn</a>
+            </nav>
+        </aside>
     </header>
+    <!-- <div id="sidebar-root"></div> Não está funcionado o js da Sidebar-->
     <main class="apresentacao">
         <section class="apresentacao__principal">
             <div class="titulo__Principal">
@@ -30,28 +49,36 @@ Decidir se o cabeçario vai ser fixado ou não
             </div>
             <div class="apresentacao__principal__1">
                 <div class="apresentacao__principal__2">
-                    
-    
-                    
-                    <h2 class="apresentacao__links__subtitulo"><strong>Eleve seu negócio digital a outro nível <br><strong class="titulo-Destaque">com um Front-end <br>de qualidade!</strong></strong></h2>
-                    <p class="apresentacao__conteudo__texto">Olá! Sou Alexsander Weigee, desenvolvedor <span>Full Stack</span>. <br>Ajudo pequenos negócios e designers a colocarem em prática boas ideias. <br>Vamos conversar?
-                    <br><br>Acesse minhas redes:
+
+
+
+                    <h2 class="apresentacao__links__subtitulo"><strong>Eleve seu negócio digital a outro nível
+                            <br><strong class="titulo-Destaque">com um Front-end <br>de qualidade!</strong></strong>
+                    </h2>
+                    <p class="apresentacao__conteudo__texto">Olá! Sou Alexsander Weigee, desenvolvedor <span>Full
+                            Stack</span>. <br>Ajudo pequenos negócios e designers a colocarem em prática boas ideias.
+                        <br>Vamos conversar?
+                        <br><br>Acesse minhas redes:
                     </p>
-                    
+
                     <div class="apresentacao__links">
-                    <a class="apresentacao__links__link" href="https://github.com/AlexsanderWeigee" target="_blank"><img src="./Assents/icons8-github-150.png" alt="Imagem github"></a>
-                    <a class="apresentacao__links__link" href="https://www.instagram.com/invites/contact/?igsh=l10tjgvtow8s&utm_content=fruiahp" target="_blank"><img src="./Assents/icons8-instagram-192.png" alt="Imagem instagram"></a>
-                    <a class="apresentacao__links__link" href="https://br.linkedin.com/in/alexsander-weigee" target="_blank"><img src="./Assents/icons8-linkedin-2-150.png" alt="Imagem linkedin"></a>
+                        <a class="apresentacao__links__link" href="https://github.com/AlexsanderWeigee"
+                            target="_blank"><img src="./Assents/icons8-github-150.png" alt="Imagem github"></a>
+                        <a class="apresentacao__links__link"
+                            href="https://www.instagram.com/invites/contact/?igsh=l10tjgvtow8s&utm_content=fruiahp"
+                            target="_blank"><img src="./Assents/icons8-instagram-192.png" alt="Imagem instagram"></a>
+                        <a class="apresentacao__links__link" href="https://br.linkedin.com/in/alexsander-weigee"
+                            target="_blank"><img src="./Assents/icons8-linkedin-2-150.png" alt="Imagem linkedin"></a>
                     </div>
-                </div>      
-                    
-                  <div>
-                      <img class="img" src="./Assents/Cópia de Cópia de JAVA_AlexanderWeigee (2).jpg" alt="Minha Imagem" >
-                  </div>  
+                </div>
+
+                <div>
+                    <img class="img" src="./Assents/Cópia de Cópia de JAVA_AlexanderWeigee (2).jpg" alt="Minha Imagem">
+                </div>
 
             </div>
             </div>
-                
+
         </section>
     </main>
     <section class="apresentacaoProfissional">
@@ -59,51 +86,45 @@ Decidir se o cabeçario vai ser fixado ou não
             <div class="titulo">
                 <h1>Desenvolvimento Profissional</h1>
             </div>
-            <p>Iniciei minha jornada na programação em 2022, quando, de forma autodidata, mergulhei no estudo de Python e logo me apaixonei pela área. Embora tenha enfrentado alguns desafios iniciais, essa experiência despertou em mim o desejo de seguir uma carreira em tecnologia. Em 2023, decidi aprofundar meus conhecimentos e ingressei no curso de Tecnólogo em Análise e Desenvolvimento de Sistemas. Paralelamente, ampliei minhas habilidades por meio de cursos complementares, como uma introdução ao C#. Em 2024, tive a oportunidade de participar do programa Geração Caldeira, onde, através da plataforma Alura, realizei 15 cursos em diversas linguagens e tecnologias, incluindo HTML, CSS, JavaScript, e Java. Hoje, estou em constante aprimoramento, com o objetivo de atuar como desenvolvedor Full Stack, contribuindo para o desenvolvimento de soluções inovadoras.</p>
+            <p>Iniciei minha jornada na programação em 2022, quando, de forma autodidata, mergulhei no estudo de Python
+                e logo me apaixonei pela área. Embora tenha enfrentado alguns desafios iniciais, essa experiência
+                despertou em mim o desejo de seguir uma carreira em tecnologia. Em 2023, decidi aprofundar meus
+                conhecimentos e ingressei no curso de Tecnólogo em Análise e Desenvolvimento de Sistemas. Paralelamente,
+                ampliei minhas habilidades por meio de cursos complementares, como uma introdução ao C#. Em 2024, tive a
+                oportunidade de participar do programa Geração Caldeira, onde, através da plataforma Alura, realizei 15
+                cursos em diversas linguagens e tecnologias, incluindo HTML, CSS, JavaScript, e Java. Hoje, estou em
+                constante aprimoramento, com o objetivo de atuar como desenvolvedor Full Stack, contribuindo para o
+                desenvolvimento de soluções inovadoras.</p>
         </div>
     </section>
-    
+
     <div class="experienciaTrabalho">
         <div class="titulo">
             <h1>Experiências de Trabalho</h1>
         </div>
         <p>
-            Em 2023, atuei como Jovem Aprendiz na Claro, por meio do programa SENAI, onde desempenhei funções como Auxiliar de Escritório Geral. Nesse cargo, minhas responsabilidades incluíam a extração e análise de dados de planilhas, elaboração de relatórios de indicadores de desempenho da rede externa e criação de gráficos no Excel para apoiar a tomada de decisões estratégicas. No meu primeiro emprego, em 2022, também como Jovem Aprendiz, na VISIA Materiais de Construção, participei dos Projetos Integradores do SENAI, onde meu grupo teve a oportunidade de solucionar desafios reais de empresas parceiras, incluindo um projeto significativo com a Petrobras.
+            Em 2023, atuei como Jovem Aprendiz na Claro, por meio do programa SENAI, onde desempenhei funções como
+            Auxiliar de Escritório Geral. Nesse cargo, minhas responsabilidades incluíam a extração e análise de dados
+            de planilhas, elaboração de relatórios de indicadores de desempenho da rede externa e criação de gráficos no
+            Excel para apoiar a tomada de decisões estratégicas. No meu primeiro emprego, em 2022, também como Jovem
+            Aprendiz, na VISIA Materiais de Construção, participei dos Projetos Integradores do SENAI, onde meu grupo
+            teve a oportunidade de solucionar desafios reais de empresas parceiras, incluindo um projeto significativo
+            com a Petrobras.
         </p>
     </div>
-    <div class="meusProjetos">
-        <div class="titulo">
-            <h1>Meus Projetos</h1>
-        </div>
-        <div class="cards">
-            <div class="cards__card">
-                <div class="cards__imgTecnologia">
-                    <img class="Img" src="Assents/JogoDoNumeroSecreto.png" alt="Imagem do card">
-                    <div>
-                        <li class="tecnologias">
-                            <img src="Assents/icons8-html-48.png" alt="tecnologia">
-                            <img src="Assents/icons8-css-48.png" alt="tecnologia">
-                            <img src="Assents/icons8-js-48.png" alt="tecnologia">
-                        </li>
-                </div>
+    <div id="projects-container" class="cards-container"> <!--Container para os projetos-->
+        <div class="meusProjetos">
+            <div class="titulo">
+                <h1>Meus Projetos</h1>
+            </div>
+            <div class="CentroCardsWrapper">
+                <div id="cards-principais" class="CentroCards"></div>
+            </div>
+            <div class="btn__Canto">
+                <div class="btn">
+                    <a href="TodosProjetos.html" class="btn1" id="btn">Todos os projetos</a>
                 </div>
             </div>
-            <div class="cards__separacao">
-                <div class="cards__Textos">
-                    <h1 class="cards__Titulo">
-                        Titulo do card
-                    </h1>
-                    <p class="card__Texto">
-                        Texto do card afgkdfvkjdbvjksdbjkgbhbsdkjvghdsbdsjlkgc ljdghfncsjfjlkdghvbjdsughsdvjuho ashgfuojhbsvjldsjgvhbdn 
-                    </p>
-                    <div class="btn">
-                        <a href="" class="explorar" id="btn">Explorar</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="btn">
-            <a href="TodosProjetos.html" class="btn1" id="btn">Todos os projetos</a>
         </div>
         <!--Adicionar cards-->
     </div>
@@ -112,14 +133,18 @@ Decidir se o cabeçario vai ser fixado ou não
             <h1>Pronto para dar vida ao seu projeto?</h1>
         </div>
         <p>
-            Realize o seu sonho digital! <br> Se você sempre imaginou ter um site, uma loja virtual ou precisa de uma solução personalizada para o seu negócio, estou aqui para transformar essa ideia em realidade. Vamos juntos criar algo incrível? Entre em contato comigo e dê o próximo passo para elevar seu projeto ao próximo nível.
+            Realize o seu sonho digital! <br> Se você sempre imaginou ter um site, uma loja virtual ou precisa de uma
+            solução personalizada para o seu negócio, estou aqui para transformar essa ideia em realidade. Vamos juntos
+            criar algo incrível? Entre em contato comigo e dê o próximo passo para elevar seu projeto ao próximo nível.
         </p>
         <div class="chamadaFinal__Redes">
             <div class="chamadaFinal__Redes__2">
-                <a href="https://github.com/AlexsanderWeigee" target="_blank"><img src="./Assents/icons8-github-150.png" alt="Imagem github"></a>
+                <a href="https://github.com/AlexsanderWeigee" target="_blank"><img src="./Assents/icons8-github-150.png"
+                        alt="Imagem github"></a>
             </div>
             <div class="chamadaFinal__Redes__2">
-                <a href="https://br.linkedin.com/in/alexsander-weigee" target="_blank"><img src="./Assents/icons8-linkedin-2-150.png" alt="Imagem linkedin"></a>
+                <a href="https://br.linkedin.com/in/alexsander-weigee" target="_blank"><img
+                        src="./Assents/icons8-linkedin-2-150.png" alt="Imagem linkedin"></a>
             </div>
         </div>
     </div>
@@ -128,7 +153,8 @@ Decidir se o cabeçario vai ser fixado ou não
             <p class="rodape">Informações de contato</p>
             <a href="https://br.linkedin.com/in/alexsander-weigee" target="_blank">Linkedin</a>
             <a href="https://github.com/AlexsanderWeigee" target="_blank">GitHub</a>
-            <a href="https://www.instagram.com/invites/contact/?igsh=l10tjgvtow8s&utm_content=fruiahp" target="_blank">Instagram</a>
+            <a href="https://www.instagram.com/invites/contact/?igsh=l10tjgvtow8s&utm_content=fruiahp"
+                target="_blank">Instagram</a>
         </div>
         <div> <!--Colocar os links das paginas quando eu as criar-->
             <p class="rodape">Abas de navegação</p>
@@ -137,6 +163,10 @@ Decidir se o cabeçario vai ser fixado ou não
             <a href="Certificados.html">Certificados</a>
         </div>
     </footer>
+    <script src="portfolio-api/Sidebar.js"></script>
+    <script src="portfolio-api/Projetos.js"></script>
+    <script src="portfolio-api/ScrollCards.js"></script>
     <script src="Voltar.js"></script> <!--Chamando o JS-->
 </body>
+
 </html>

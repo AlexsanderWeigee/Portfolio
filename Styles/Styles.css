@@ -10,24 +10,30 @@
     --cor-setiaria: #24091F;
     --cor-octaria: #180615;
     --cor-nonaria: #00132F;
+    --cor-decimaria: #ddd;
     --cor-hover: #272727;
 
     --fonte-primaria: "Krona One", sans-serif;
-    --fonte-segundaria: "Montserrat" , sans-serif;
+    --fonte-segundaria: "Montserrat", sans-serif;
 }
 
-*
-{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
 a {
+    font-size: var(--fonte-segundaria);
     text-decoration: none;
 }
 
-span{
+a:hover {
+    color: var(--cor-terciaria);
+    text-shadow: 0 0 5px var(--cor-terciaria), 0 0 10px var(--cor-terciaria), 0 0 20px var(--cor-terciaria);
+}
+
+span {
     color: var(--cor-terciaria);
     border: 1px solid #22d4fd;
     padding: 2px;
@@ -35,70 +41,133 @@ span{
 
 
 .cabecalho {
-    /*position: fixed; Resolver esse problema, fixar o cabeçalho sem desalinhar as paginas, principalmente a Todos os projetos, talvez eu tire isso*/
     text-align: left;
     padding: 1%;
     padding-left: 150px;
 
-    #checkbox {
-        display: none;
-      }
-      
-      .toggle {
-        position: relative;
-        width: 90px;
-        height: 90px;
-        cursor: pointer;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        gap: 15px;
-        transition-duration: .5s;
-      }
-      
-      .bars {
-        width: 100%;
-        height: 7px;
-        background-color: var(--cor-terciaria);
-        border-radius: 4px;
-      }
-      
-      #bar2 {
-        transition-duration: .8s;
-      }
-      
-      #bar1,#bar3 {
-        width: 70%;
-      }
-      
-      #checkbox:checked + .toggle .bars {
-        position: absolute;
-        transition-duration: .5s;
-      }
-      
-      #checkbox:checked + .toggle #bar2 {
-        transform: scaleX(0);
-        transition-duration: .5s;
-      }
-      
-      #checkbox:checked + .toggle #bar1 {
-        width: 100%;
-        transform: rotate(45deg);
-        transition-duration: .5s;
-      }
-      
-      #checkbox:checked + .toggle #bar3 {
-        width: 100%;
-        transform: rotate(-45deg);
-        transition-duration: .5s;
-      }
-      
-      #checkbox:checked + .toggle {
-        transition-duration: .5s;
-        transform: rotate(180deg);
-      }
 }
+
+#checkbox {
+    display: none;
+}
+
+.toggle {
+    position: relative;
+    width: 90px;
+    height: 90px;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    transition-duration: .5s;
+    z-index: 1100;
+}
+
+.sidebar--open+.cabecalho .toggle {
+    position: fixed;
+}
+
+.bars {
+    width: 100%;
+    height: 7px;
+    background-color: var(--cor-terciaria);
+    border-radius: 4px;
+}
+
+#bar2 {
+    transition-duration: .8s;
+}
+
+#bar1, #bar3 {
+    width: 70%;
+}
+
+#checkbox:checked+.toggle {
+    position: fixed;
+}
+
+#checkbox:checked+.toggle .bars {
+    position: absolute;
+    transition-duration: .5s;
+}
+
+#checkbox:checked+.toggle #bar1 {
+    width: 100%;
+    transform: rotate(45deg);
+    transition-duration: .5s;
+}
+
+#checkbox:checked+.toggle #bar2 {
+    transform: scaleX(0);
+    transition-duration: .5s;
+}
+
+#checkbox:checked+.toggle #bar3 {
+    width: 100%;
+    transform: rotate(-45deg);
+    transition-duration: .5s;
+}
+
+#checkbox:checked+.toggle {
+    transition-duration: .5s;
+    transform: rotate(180deg);
+}
+
+/* SIDEBAR */
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    width: 320px;
+    height: 100vh;
+
+    background-color: var(--cor-secundario);
+    box-shadow: 4px 0 15px var(--cor-primaria)(0, 0, 0, 0.15);
+
+    transform: translateX(-100%);
+    transition: transform 0.4s ease;
+
+    z-index: 1000;
+}
+
+/* Quando o checkbox estiver marcado, a sidebar aparece */
+#checkbox:checked~.sidebar {
+    transform: translateX(0);
+}
+
+/* Conteúdo interno */
+.sidebar__nav {
+    display: flex;
+    flex-direction: column;
+    padding: 55px 30px;
+    gap: 20px;
+}
+
+.sidebar__titulo {
+    font-size: var(--fonte-segundaria);
+    margin-bottom: 10px;
+}
+
+.sidebar__link {
+    text-decoration: none;
+    font-size: 1.1rem;
+    color: var(--cor-nonaria);
+    transition: color 0.3s;
+}
+
+.sidebar__link:hover {
+    color: var(--cor-terciaria);
+}
+
+.sidebar__divisor {
+    height: 1px;
+    background-color: var(--cor-decimaria);
+    margin: 20px 0;
+}
+
 
 .titulo-Destaque {
     color: var(--cor-terciaria);
@@ -106,16 +175,14 @@ span{
     font-family: var(--fonte-primaria);
 }
 
-.cabecario {
-    padding: 2% 0% 2% 4%;
-}
-
 .apresentacao {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center; /* Centraliza na vertical e horizontal */
-    padding: 0% 0; /* Adiciona espaço em volta */
+    justify-content: center;
+    /* Centraliza na vertical e horizontal */
+    padding: 0% 0;
+    /* Adiciona espaço em volta */
     display: flex;
 }
 
@@ -125,12 +192,14 @@ span{
     justify-content: space-between;
     margin-left: 5%;
     margin-right: 5%;
-    width: 70%; /* Garante que o conteúdo ocupe 70% da tela, com 5% de margem de cada lado */
+    width: 70%;
+    /* Garante que o conteúdo ocupe 70% da tela, com 5% de margem de cada lado */
 }
 
 .apresentacao__principal__2 {
     margin-top: 5%;
-    flex-grow: 1; /* Permite que o conteúdo textual ocupe todo o espaço disponível */
+    flex-grow: 1;
+    /* Permite que o conteúdo textual ocupe todo o espaço disponível */
     margin-left: 6%;
 }
 
@@ -155,8 +224,10 @@ span{
     line-height: 1.6;
     font-family: var(--fonte-segundaria);
     color: var(--cor-secundario);
-    text-align: left; /* Centraliza o texto na esquerda */
-    margin: 20px 0px 50px 0px; /* Adiciona espaçamento ao redor */
+    text-align: left;
+    /* Centraliza o texto na esquerda */
+    margin: 20px 0px 50px 0px;
+    /* Adiciona espaçamento ao redor */
     padding-right: 0%;
     margin-right: 0%;
     margin-left: 5%;
@@ -165,11 +236,14 @@ span{
 
 .apresentacao__links {
     display: flex;
-    flex-direction: row; /* Alinha os ícones lado a lado */
+    flex-direction: row;
+    /* Alinha os ícones lado a lado */
     justify-content: left;
     align-items: center;
-    gap: 16px; /* Espaçamento entre os ícones */
-    margin-top: 20px; /* Espaço entre texto e ícones */
+    gap: 16px;
+    /* Espaçamento entre os ícones */
+    margin-top: 20px;
+    /* Espaço entre texto e ícones */
 }
 
 .apresentacao__links__subtitulo {
@@ -233,9 +307,12 @@ p {
 }
 
 .apresentacao__links__link {
-    display: flex;                         /*Permite a flexibilização dos intes de uma Div*/
-    justify-content: center;               /*Deixa todos os itens de uma Div alinhados no centro*/
-    width: 200px;                          /*Largura*/
+    display: flex;
+    /*Permite a flexibilização dos intes de uma Div*/
+    justify-content: center;
+    /*Deixa todos os itens de uma Div alinhados no centro*/
+    width: 200px;
+    /*Largura*/
     margin-left: 2%;
     padding: 0%;
 }
@@ -245,8 +322,10 @@ p {
     width: 200%;
     height: auto;
     border-radius: 50px;
-    margin-left: 5%; /* Espaçamento de 5% entre a div de texto e a imagem */
-    margin-right: 5%; /* Espaçamento de 5% até a margem direita */
+    margin-left: 5%;
+    /* Espaçamento de 5% entre a div de texto e a imagem */
+    margin-right: 5%;
+    /* Espaçamento de 5% até a margem direita */
 }
 
 .apresentacaoProfissional {
@@ -263,14 +342,16 @@ p {
 
 .meusProjetos {
     background-color: var(--cor-setiaria);
-    padding: 2%;    
+    /* padding-top: 2%; só ativar quando resolver o problema do scroll e hover */
+    padding-top: 2%;
+    /*Só vai ficar até resolver o problema de cima */
     height: 1500px;
 }
 
 /* Botão de projetos*/
-/* From Uiverse.io by zjssun */ 
+/* From Uiverse.io by zjssun */
 .btn1 {
-    padding: 40px 90px;
+    padding: 25px 60px;
     font-family: var(--fonte-primaria);
     text-transform: uppercase;
     border-radius: 13px;
@@ -284,20 +365,22 @@ p {
     border: 1px solid var(--cor-terciaria);
     transition: 0.5s ease;
     user-select: none;
-  }
-  
-  #btn:hover { /* Depois padronizar as cores dos botões */
+    margin: 2%;
+}
+
+#btn:hover {
+    /* Depois padronizar as cores dos botões */
     color: var(--cor-secundario);
-    background: #008cff; 
+    background: #008cff;
     border: 1px solid #008cff;
     text-shadow: 0 0 5px var(--cor-secundario), 0 0 10px var(--cor-secundario), 0 0 20px var(--cor-secundario);
     box-shadow: 0 0 5px #008cff, 0 0 20px #008cff, 0 0 50px #008cff, 0 0 100px #008cff;
-  } 
-  
-  #btn:hover {
+}
+
+#btn:hover {
     outline: none;
-  }
-  
+}
+
 .chamadaFinal {
     background-color: var(--cor-octaria);
     padding: 2%;
@@ -306,10 +389,15 @@ p {
 
 .btn {
     display: flex;
-    justify-content: end;
-    margin-top: 5%;
+    margin: 5%;
 }
 
+.btn__Canto {
+    justify-items: end;
+    white-space: nowrap;
+}
+
+html,
 body {
     box-sizing: border-box;
     margin: 0;
@@ -317,7 +405,8 @@ body {
     background-color: var(--cor-primaria);
     font-family: var(--fonte-segundaria);
     color: var(--cor-secundario);
-    text-align: center; /* Centraliza o texto em todo o corpo */
+    text-align: center;
+    /* Centraliza o texto em todo o corpo */
 }
 
 .rodape {
@@ -341,7 +430,7 @@ footer {
     background-color: var(--cor-quarternaria);
     color: var(--cor-secundario);
     display: flex;
-    
+
     align-items: left;
 }
 
@@ -360,12 +449,18 @@ footer a {
 /* Todos os Projetos */
 
 .projetos {
-    background-color: var(--cor-nonaria);   
-    height: 1500px;
+    background-color: var(--cor-nonaria);
+    height: 100%;
 }
 
 .projetos__cards {
-    margin-top: 150px; /* Talvez eu remova isso */
+    display: grid;
+    grid-template-columns: repeat(3, minmax(920px, 1fr));
+    gap: 3rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    margin-top: 150px;
+    /* Talvez eu remova isso */
     margin: 2%;
 }
 
@@ -376,18 +471,26 @@ footer a {
     display: flex;
     align-items: end;
     justify-content: end;
-
 }
 
 .btn2 {
     display: flex;
     flex-direction: column;
     align-items: end;
-    margin-left: 10%;
-} 
+    margin-left: 12%;
+    /*talvez eu exclua no futuro*/
+}
+
+.btnVoltar {
+    margin: 2%;
+}
 
 /* Certificados */
 
 .certificados {
     background-color: var(--cor-nonaria);
+}
+
+.cards-container {
+    min-height: 100vh;
 }
