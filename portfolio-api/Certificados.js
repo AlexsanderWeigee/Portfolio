@@ -174,13 +174,9 @@ function criarCertificado(certificado) {
 
         <div class="cards__separacao">
             <div class="cards__Textos">
-                <h1 class="cards__Titulo">
-                    ${certificado.titulo}
-                </h1>
+                <h1 class="cards__Titulo">${certificado.titulo}</h1>
 
-                <p class="card__Texto">
-                    ${certificado.descricao}
-                </p>
+                <p class="card__Texto">${certificado.descricao}</p>
 
                 <small class="card__data">
                     ${new Date(certificado.date + "T00:00:00").toLocaleDateString("pt-BR")}
