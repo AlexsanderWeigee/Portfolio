@@ -45,7 +45,6 @@ span {
     text-align: left;
     padding: 1%;
     padding-left: 100px;
-
 }
 
 #checkbox {
@@ -81,7 +80,8 @@ span {
     transition-duration: .8s;
 }
 
-#bar1, #bar3 {
+#bar1,
+#bar3 {
     width: 70%;
 }
 
@@ -181,8 +181,6 @@ span {
     padding: 0% 0;
     /* Adiciona espaço em volta */
     display: flex;
-
-    padding-bottom: 50px;
 }
 
 .apresentacao__principal__1 {
@@ -192,7 +190,6 @@ span {
 }
 
 .apresentacao__principal__2 {
-    flex-grow: 1;
     margin: 1%;
     margin-left: 8%;
     max-width: 50%;
@@ -232,18 +229,13 @@ span {
 
 .apresentacao__links {
     display: flex;
-
-    align-items: center;
-    /* Espaçamento entre os ícones */
-    margin-top: 20px;
-    /* Espaço entre texto e ícones */
+    margin-left: 40px;
+    margin-bottom: 40px;
 }
 
 .apresentacao__links1 {
     display: flex;
     justify-content: center;
-    align-items: center;
-    margin-top: 20px;
     padding-bottom: 80px;
 }
 
@@ -270,7 +262,7 @@ span {
     margin-left: 10%;
 }
 
-.titulo__Principal__Centro{
+.titulo__Principal__Centro {
     display: flex;
     align-items: end;
 }
@@ -303,7 +295,7 @@ h2 {
 p {
     font-family: var(--fonte-segundaria);
     font-weight: 400;
-    font-size: 40px;
+    font-size: 10px;
     text-align: left;
     margin: 4%;
     margin-right: 20%;
@@ -313,22 +305,16 @@ p {
 
 .apresentacao__links__link {
     display: flex;
+    align-items: center;
     /*Permite a flexibilização dos intes de uma Div*/
-    justify-content: center;
     /*Deixa todos os itens de uma Div alinhados no centro*/
-    width: 2px;
+    width: 80px;
     /*Largura*/
-    margin-left: 10%;
     padding: 0%;
 }
 
 .apresentacao__links__Img {
     max-width: 60px;
-}
-
-.div__Do__ODIO__Esclamacao {
-    margin-left: 30%;
-    padding-bottom: 8%;
 }
 
 .img {
@@ -414,7 +400,7 @@ p {
 
 .btn {
     display: flex;
-    margin: 5%;
+    margin: 3%;
 }
 
 .btn__Curriculo {
@@ -423,7 +409,8 @@ p {
 }
 
 .btn__Canto {
-    justify-items: end;
+    display: flex;
+    justify-content: end;
     white-space: nowrap;
 }
 
@@ -525,6 +512,10 @@ footer a {
     /*talvez eu exclua no futuro*/
 }
 
+.btn3 {
+    width: 135px;
+}
+
 .btnVoltar {
     margin: 2%;
 }
@@ -534,3 +525,93 @@ footer a {
 .certificados {
     background-color: var(--cor-nonaria);
 }
+
+/* Responsividade */
+@media (max-width: 900px) {
+    .cabecalho {
+        padding-left: 20px;
+    }
+
+    .apresentacao__principal__titulo {
+        white-space: pre-wrap;
+        max-width: 360px;
+    }
+
+    .apresentacao__conteudo__texto {
+        font-size: 20px;
+    }
+
+    .apresentacao__links {
+        margin-left: 20px;
+    }
+
+    .apresentacao__principal__1 {
+        flex-direction: column-reverse;
+        /* imagem em cima, texto embaixo */
+        align-items: center;
+        text-align: center;
+    }
+
+    .apresentacao__principal__2 {
+        padding: 0 10%;
+        max-width: 600px;
+    }
+
+    .img {
+        margin-left: 0;
+        margin-bottom: 20px;
+        margin-top: 20px;
+        max-width: 220px;
+    }
+
+    .titulo__Principal {
+        min-width: 65%;
+    }
+
+    .btn1 {
+        padding: 10px 15px;
+        border-radius: 7px;
+        font-size: 10px;
+    }
+
+    .certificados {
+        flex-direction: column;
+    }
+
+    .cards-container {
+        margin-left: 15px;
+    }
+
+    .btn__Canto {
+        margin-right: 2%;
+    }
+
+    .rodape {
+        font-size: 15px;
+    }
+
+    .rodape__Link {
+        font-size: 10px;
+    }
+
+    .projetos__cards {
+
+        grid-template-columns: repeat(1, minmax(320px, 1fr));
+    }
+
+}
+
+/* @media screen and (max-width: 900px) {
+    .apresentacao__principal__titulo, .titulo__Principal {
+        font-size: 20px;
+        border-radius: 7px;
+    }
+
+    .apresentacao__links__subtitulo {
+        font-size: 20px;
+    }
+
+    .titulo-Destaque {
+        font-size: 20px;
+    }
+} */

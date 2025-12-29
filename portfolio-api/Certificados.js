@@ -165,7 +165,7 @@ const certificados = [
 
 function criarCertificado(certificado) {
     return `
-    <div class="cards">
+    <div class="cards cards__Certificado">
         <div class="cards__card">
             <div class="cards__imgTecnologia">
                 <img class="Img" src="${certificado.imagem}" alt="Imagem do certificado">
@@ -173,8 +173,8 @@ function criarCertificado(certificado) {
         </div>
 
         <div class="cards__separacao">
-            <div class="cards__Textos">
-                <h1 class="cards__Titulo">${certificado.titulo}</h1>
+            <div class="cards__Textos cards__Textos__Certificado">
+                <h1 class="cards__Titulo cards__Titulo__Certificado">${certificado.titulo}</h1>
 
                 <p class="card__Texto">${certificado.descricao}</p>
 

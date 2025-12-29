@@ -38,17 +38,21 @@
 /* Tentando alinhar os Cards principais dentro dos "Meus Projetos" */
 .CentroCards{
     display: flex;
-    gap: 4rem;
+    gap: 80px;
+    overflow: auto; /*Não está funcionando o Scroll, se ativado desliga e limita o hover */
     scroll-behavior: smooth;
-    scroll-snap-type: x proximity;
-    z-index: 1;
-    overflow: hidden; /*Não está funcionando o Scroll, se ativado desliga e limita o hover */
+    -webkit-overflow-scrolling: touch;
+
+    /* Talvez eu apague em baixo */
+
+    /* scroll-snap-type: x proximity;
+    z-index: 1; */ 
 }
 
 .CentroCardsWrapper {
     width: 100%;
     overflow-x: hidden;
-    padding: 4rem 0;
+    padding-top: 4rem;
 }
 
 .CentroCards::-webkit-scrollbar {
@@ -102,6 +106,10 @@
     font-size: 18px;
 }
 
+.cards__Titulo__Certificado {
+    font-size: 15px;
+}
+
 .cards__Textos { /* Concertar Hover, provavelmente o bug esteja aqui */
     background-color: var(--cor-dectaaria);
     color: var(--cor-secundario);
@@ -137,13 +145,14 @@
 .card__btn {
     display: flex;
     margin-inline-end: auto;
+    justify-content: left;
 }
 
 .explorar {
     padding: 10px 15px;
     font-family: var(--fonte-primaria);
     text-transform: uppercase;
-    border-radius: 13px;
+    border-radius: 10px;
     font-size: 10px;
     font-weight: 5;
     color: var(--cor-terciaria);
@@ -167,4 +176,70 @@
 .card__Texto::-webkit-scrollbar-thumb {
     background-color: var(--cor-terciaria);
     border-radius: 10px;
+}
+
+@media (max-width: 900px) {
+    .cards {
+    max-width: 420px;
+    width: 100%;
+    height: 195px;
+    border-radius: 15px;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    margin: 1%;
+}
+
+.cards__Textos { /* Concertar Hover, provavelmente o bug esteja aqui */
+    width: 150px;
+    height: 195px;
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+}
+
+.card__Texto {
+    overflow-y: auto;
+    max-height: 95px; /* ajuste fino aqui */
+    width: 95%;
+    font-size: 15px;
+    margin-top: 2%;
+    line-height: 1.4;
+
+    -webkit-overflow-scrolling: touch; /* essencial para mobile */
+}
+
+.cards__Certificado {
+    max-width: 320px;
+    height: 220px;
+}
+
+.cards__Textos__Certificado {
+    width: 220px;
+    height: 220px;
+}
+
+.cards__Titulo__Certificado {
+    font-size: 15px;
+}
+
+.Img {
+    width: 120px;
+    height: 60px;
+    transition: transform 0.3s ease;
+    box-sizing: border-box;
+}
+
+.CentroCards{
+    gap: 2rem;
+}
+
+.card__data {
+    margin-left: 12px;
+}
+
+.explorar {
+    padding: 7px 7px;
+    border-radius: 7px;
+    font-size: 10px;
+}
+
 }
