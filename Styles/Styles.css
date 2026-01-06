@@ -40,7 +40,6 @@ span {
     white-space: nowrap;
 }
 
-
 .cabecalho {
     text-align: left;
     padding: 1%;
@@ -165,7 +164,6 @@ span {
     margin: 20px 0;
 }
 
-
 .titulo-Destaque {
     color: var(--cor-terciaria);
     font-size: 30px;
@@ -203,7 +201,6 @@ span {
     width: 100%;
     height: auto;
 }
-
 
 .apresentacao__principal__titulo {
     font-size: 30px;
@@ -306,10 +303,7 @@ p {
 .apresentacao__links__link {
     display: flex;
     align-items: center;
-    /*Permite a flexibilização dos intes de uma Div*/
-    /*Deixa todos os itens de uma Div alinhados no centro*/
     width: 80px;
-    /*Largura*/
     padding: 0%;
 }
 
@@ -323,9 +317,6 @@ p {
     max-height: 700px;
     border-radius: 50px;
     margin-left: 20%;
-    /* Espaçamento de 5% entre a div de texto e a imagem */
-
-    /* Espaçamento de 5% até a margem direita */
 }
 
 .apresentacaoProfissional {
@@ -346,9 +337,7 @@ p {
 
 .meusProjetos {
     background-color: var(--cor-setiaria);
-    /* padding-top: 2%; só ativar quando resolver o problema do scroll e hover */
     padding-top: 8%;
-    /*Só vai ficar até resolver o problema de cima */
     height: auto;
 }
 
@@ -400,7 +389,7 @@ p {
 
 .btn {
     display: flex;
-    margin: 3%;
+    margin: 2%;
 }
 
 .btn__Curriculo {
@@ -412,6 +401,8 @@ p {
     display: flex;
     justify-content: end;
     white-space: nowrap;
+    margin-right: 1rem;
+    margin-bottom: 2rem;
 }
 
 html,
@@ -578,12 +569,8 @@ footer a {
         flex-direction: column;
     }
 
-    .cards-container {
-        margin-left: 15px;
-    }
-
     .btn__Canto {
-        margin-right: 2%;
+        margin-right: 12px;
     }
 
     .rodape {
@@ -595,23 +582,12 @@ footer a {
     }
 
     .projetos__cards {
-
         grid-template-columns: repeat(1, minmax(320px, 1fr));
     }
 
+    .curriculo__Img {
+    max-width: 85%;
+    max-height: 85%;
 }
 
-/* @media screen and (max-width: 900px) {
-    .apresentacao__principal__titulo, .titulo__Principal {
-        font-size: 20px;
-        border-radius: 7px;
-    }
-
-    .apresentacao__links__subtitulo {
-        font-size: 20px;
-    }
-
-    .titulo-Destaque {
-        font-size: 20px;
-    }
-} */
+}
